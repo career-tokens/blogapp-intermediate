@@ -23,3 +23,16 @@
     box-shadow:1px 3px 5px black;
     background-color:#E5FDD1;
 }
+h2{
+    text-decoration:underline;
+    font-size:40px;
+    color:#E80F88;
+}
+.button{
+    text-align:center;
+    padding:20px;
+}
+.btn{
+    padding:8px;
+    font-size:17px;
+}
