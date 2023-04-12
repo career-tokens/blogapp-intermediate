@@ -10,17 +10,17 @@ const Home = () => {
   }
 
   useEffect(() => {
-    fetch('http://localhost:3000/blogs')
+    fetch('http://localhost:3001/blogs')
       .then(res => {
         return res.json();
       }).then(data => {
-        console.log(data);
+        setBlogs(data);
       })
   }, []);
+
   return (
     <>
-     {/**  <Bloglist blogs={blogs} title={"All Blogs"} handleDelete={handleDelete} />*/}
-      {/**<Bloglist blogs={blogs.filter((blog) => blog.author == 'author1')} title={"Author1's Blogs"} />*/}
+     {blogs&&<Bloglist blogs={blogs} title={"All Blogs"} handleDelete={handleDelete} />}
     </>
   )
 }
