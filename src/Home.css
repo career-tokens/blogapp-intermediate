@@ -4,39 +4,57 @@
     margin:0 auto;
     flex-direction:column;
     padding:30px;
-    background-color:#FAF8F1;
+    background-color:#4E6E81;
+    /**FAF8F1*/
 }
 .blog{
     width:1000px;
     padding:12px;
+    margin-left:-360px;
+    margin-bottom:20px;
+    background-color:black;
+    transition: transform 0.3s ease-in-out;
+    border-radius:2rem;
 }
 .blogtitle{
     font-size:35px;
-    color:#E90064;
-    text-align:center;
+    color:white;
+    text-align:left;
     font-style:Times New Roman;
+    margin-left:20px;
+}
+.blogtitle:hover{
+    text-decoration:underline;
 }
 .blogauthor{
     font-size:27px;
     color: #865DFF;
-    text-align:center;
+    text-align:left;
+    margin-left:20px;
+}
+.blogauthor:hover{
+    text-decoration:underline;
 }
 .blog:hover{
-    box-shadow:1px 3px 5px black;
-    background-color:#E5FDD1;
+    transform: scale(1.05);
+    outline: 3px solid white; 
+    /**40a9ff;*/
 }
 h2{
     font-size:40px;
-    color:#E80F88;
+    color:white;/**#E80F88;*/
+    margin-right:355px;
 }
 .button{
     text-align:center;
     padding:20px;
     margin-top:24px;
+   
 }
 .btn{
     padding:8px;
     font-size:17px;
+    border-radius:1.5rem;
 }
 .Link{
     text-decoration:none;

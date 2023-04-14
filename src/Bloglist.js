@@ -31,7 +31,7 @@ const Bloglist = ({ title }) => {
         <div className="blog" key={blog.id}>
             <Link className="Link" to={`/blogs/${blog.id}`}>{/**back comma very imp */}
                 <div className="blogtitle">{blog.title}</div>
-                <div className="blogauthor">Written by {blog.author}</div>
+                <div className="blogauthor">~ {blog.author}</div>
             </Link>
             <div className="button">
                 <button className="btn" onClick={() => { handleDelete(blog.id) }}>Delete Blog</button>
