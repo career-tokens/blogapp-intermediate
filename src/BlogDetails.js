@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "./useFetch";
+import './BlogDetails.css';
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -16,15 +17,15 @@ const BlogDetails = () => {
 
   return (
     <div className="blog-details">
-      { isPending && <div>Loading...</div> }
+      { isPending && <div className="loading">Loading...</div> }
       { error && <div>{ error }</div> }
       { blog && (
-        <article>
-          <h2>{ blog.title }</h2>
-          <p>Written by { blog.author }</p>
-          <div>{ blog.body }</div>
-          <button onClick={handleClick}>Delete Blog</button>
-        </article>
+        <div className="article">
+          <h2 className="heading">{ blog.title }</h2>
+          <p className="para">Written by { blog.author }</p>
+          <div className="body">{ blog.body }</div>
+          <button className="delete" onClick={handleClick}>Delete Blog</button>
+        </div>
       )}
     </div>
   );

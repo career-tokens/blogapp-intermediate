@@ -8,11 +8,13 @@
 }
 .blog{
     width:1000px;
+    padding:12px;
 }
 .blogtitle{
-    font-size:45px;
+    font-size:35px;
     color:#E90064;
     text-align:center;
+    font-style:Times New Roman;
 }
 .blogauthor{
     font-size:27px;
@@ -24,15 +26,18 @@
     background-color:#E5FDD1;
 }
 h2{
-    text-decoration:underline;
     font-size:40px;
     color:#E80F88;
 }
 .button{
     text-align:center;
     padding:20px;
+    margin-top:24px;
 }
 .btn{
     padding:8px;
     font-size:17px;
+}
+.Link{
+    text-decoration:none;
 }

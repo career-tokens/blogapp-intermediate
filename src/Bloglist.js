@@ -29,9 +29,9 @@ const Bloglist = ({ title }) => {
     <h2>{title}</h2>
     {blogs&&blogs.map((blog) =>(
         <div className="blog" key={blog.id}>
-            <Link to={`/blogs/${blog.id}`}>{/**back comma very imp */}
-                <h2 className="blogtitle">{blog.title}</h2>
-                <p className="blogauthor">Written by {blog.author}</p>
+            <Link className="Link" to={`/blogs/${blog.id}`}>{/**back comma very imp */}
+                <div className="blogtitle">{blog.title}</div>
+                <div className="blogauthor">Written by {blog.author}</div>
             </Link>
             <div className="button">
                 <button className="btn" onClick={() => { handleDelete(blog.id) }}>Delete Blog</button>

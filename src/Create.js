@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Create.css';
 
 const Create = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
-  const [author, setAuthor] = useState('mario');
+  const [author, setAuthor] = useState('');
   const [isPending, setIsPending] = useState(false);
   const navigate = useNavigate();
 
@@ -42,13 +43,12 @@ const Create = () => {
           onChange={(e) => setBody(e.target.value)}
         ></textarea>
         <label>Blog author:</label>
-        <select
+        <input 
+          type="text" 
+          required 
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
-        >
-          <option value="mario">mario</option>
-          <option value="yoshi">yoshi</option>
-        </select>
+        />
         {!isPending && <button>Add Blog</button>}
         {isPending&&<button disabled>Adding Blog...</button>}
       </form>
