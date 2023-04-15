@@ -1,16 +1,16 @@
 {
   "blogs": [
     {
-      "title": "title7",
-      "body": "body7",
-      "author": "mario",
-      "id": 5
-    },
-    {
       "title": "Here’s How Two New Orleans Teenagers Found a New Proof of the Pythagorean Theorem",
       "body": "Recently, two teenage girls — Calcea Johnson and Ne’Kiya Jackson — gave a presentation to the American Mathematical Society where they demonstrated a new proof of the Pythagorean Theorem. Their proof has caused quite a stir.\n\nOne reason for the stir delights me and makes me incredibly happy as a teacher of mathematics. By all accounts, these two teenage math students are the exact opposite of the majority of the math establishment.",
       "author": "mario",
       "id": 6
+    },
+    {
+      "title": "Deep Learning with PyTorch (9-Day Mini-Course)",
+      "body": "Deep learning is a fascinating field of study and the techniques are achieving world class results in a range of challenging machine learning problems. It can be hard to get started in deep learning.\nWhich library should you use and which techniques should you focus on?\n\nIn this 9-part crash course you will discover applied deep learning in Python with the easy to use and powerful PyTorch library. This mini-course is intended for practitioners that are already comfortable with programming in Python and knows the basic concept of machine learning. Let’s get started.\n\nThis is a long and useful post. You might want to print it out.\n\nLet’s get started.",
+      "author": "Adrian Tam",
+      "id": 7
     }
   ]
 }

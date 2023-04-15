@@ -42,8 +42,11 @@
 }
 h2{
     font-size:40px;
-    color:white;/**#E80F88;*/
+    color:blue;;/**#E80F88;*/
     margin-right:355px;
+    background-color:white;
+    border-radius:0.5rem;
+    padding:5px;
 }
 .button{
     text-align:center;

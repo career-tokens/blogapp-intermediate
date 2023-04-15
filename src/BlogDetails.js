@@ -20,8 +20,8 @@ const BlogDetails = () => {
       { isPending && <div className="loading">Loading...</div> }
       { error && <div>{ error }</div> }
       { blog && (
-        <div className="article">
-          <h2 className="heading">{ blog.title }</h2>
+        <div className="article">  
+          <div className="heading">{blog.title}</div>
           <p className="para">~ { blog.author }</p>
           <div className="body">{ blog.body }</div>
           <button className="delete" onClick={handleClick}>Delete Blog</button>
