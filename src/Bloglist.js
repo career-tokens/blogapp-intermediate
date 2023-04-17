@@ -2,24 +2,34 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
+import { dab } from "./Firebase";
+import {  ref, remove } from "firebase/database";
 
 const Bloglist = ({ title }) => {
-    const [blogs, setBlogs] = useState(null);
+    const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3001/blogs')
-          .then(res => {
-            return res.json();
-          }).then(data => {
-            setBlogs(data);
-          })
+      fetch('https://react-blog-937a6-default-rtdb.firebaseio.com//blogs.json')
+        .then(res => res.json())
+        .then(data => {
+          if (data&&Object.keys(data).length > 0) {
+            const blogsArray = Object.keys(data).map(key => {
+              return { id: key, ...data[key] };
+            });
+            setBlogs(blogsArray);
+          }
+        })
+        .catch(error => {
+          console.log(error);
+        });
     });
+    
+    
     
     const navigate = useNavigate();
     const handleDelete = (id) => {
-        fetch('http://localhost:3001/blogs/' + id, {
-          method: 'DELETE'
-        }).then(() => {
+      const blogRef = ref(dab, `blogs/${id}`);
+      remove(blogRef).then(() => {
           navigate('/');
         }) 
       }

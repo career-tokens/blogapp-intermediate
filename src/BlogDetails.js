@@ -1,19 +1,34 @@
 import { useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
 import useFetch from "./useFetch";
 import './BlogDetails.css';
+import { dab } from "./Firebase";
+import { get,child,ref, remove } from "firebase/database";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const { data: blog, error, isPending } = useFetch('http://localhost:3001/blogs/' + id);
+  /**const [blog, setBlog] = useState('');*/
+  const { data: blog, error, isPending } = useFetch(`https://react-blog-937a6-default-rtdb.firebaseio.com/blogs/${id}.json`);
+  /**get(child(ref(dab), `blogs/${id}`)).then((snapshot) => {
+    if (snapshot.exists()) {
+     setBlog(snapshot.val());
+    } else {
+      console.log("No data available");
+    }
+  }
+  )*/
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    fetch('http://localhost:3001/blogs/' + blog.id, {
+  const handleClick = (id) => {
+    fetch(`https://react-blog-937a6-default-rtdb.firebaseio.com/blogs/${id}.json`, {
       method: 'DELETE'
     }).then(() => {
       navigate('/');
-    }) 
+    }).catch(error => {
+      console.log(error);
+    });
   }
+  
 
   return (
     <div className="blog-details">

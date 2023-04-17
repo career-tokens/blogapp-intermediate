@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { dab } from "./Firebase";
+import { uid } from "uid";
+import { set,ref } from "firebase/database";
 import './Create.css';
 
 const Create = () => {
@@ -13,8 +16,7 @@ const Create = () => {
     e.preventDefault();
     const blog = { title, body, author };
     setIsPending(true);
-
-    fetch('http://localhost:3001/blogs/', {
+    fetch('https://react-blog-937a6-default-rtdb.firebaseio.com/blogs.json', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog)

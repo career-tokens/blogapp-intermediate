@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
 import {
   GoogleAuthProvider,
   getAuth,
@@ -24,10 +25,12 @@ const firebaseConfig = {
   messagingSenderId: "904760319835",
   appId: "1:904760319835:web:44fd0d957f114b4e51447e",
   measurementId: "G-Q4TYKH9GG7",
+  databaseURL:"https://react-blog-937a6-default-rtdb.firebaseio.com",
 };
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const dab = getDatabase(app);//realtime database
 const googleProvider = new GoogleAuthProvider();
 const signInWithGoogle = async () => {
   try {
@@ -86,6 +89,7 @@ const logout = () => {
 export {
   auth,
   db,
+  dab,
   signInWithGoogle,
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,

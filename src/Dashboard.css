@@ -11,6 +11,8 @@
     text-align: center;
     background-color: #dcdcdc;
     padding: 30px;
+    border-radius:1rem;
+    font-size:25px;
   }
   .dashboard__btn {
     padding: 10px;
