@@ -29,11 +29,14 @@ const Bloglist = ({ title }) => {
     
     const navigate = useNavigate();
     const handleDelete = (id) => {
-      const blogRef = ref(dab, `blogs/${id}`);
-      remove(blogRef).then(() => {
-          navigate('/');
-        }) 
-      }
+      fetch(`http://localhost:3001/api/transactions/${id}`, {
+        method: 'DELETE'
+      }).then(() => {
+        navigate('/');
+      }).catch(error => {
+        console.log(error);
+      });
+    }
     return (
     <>  
     <div className="home2">
@@ -45,7 +48,7 @@ const Bloglist = ({ title }) => {
                 <div className="blogauthor">~ {blog.author}</div>
             </Link>
             <div className="button">
-                <button className="btn" onClick={() => { handleDelete(blog.id) }}>Delete Blog</button>
+                <button className="btn" onClick={() => { handleDelete(blog._id) }}>Delete Blog</button>
             </div>
     </div>
     ))}  

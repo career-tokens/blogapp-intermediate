@@ -20,7 +20,7 @@ const BlogDetails = () => {
   const navigate = useNavigate();
 
   const handleClick = (id) => {
-    fetch(`https://react-blog-937a6-default-rtdb.firebaseio.com/blogs/${id}.json`, {
+    fetch(`http://localhost:3001/api/transactions/${id}`, {
       method: 'DELETE'
     }).then(() => {
       navigate('/');
@@ -39,7 +39,7 @@ const BlogDetails = () => {
           <div className="heading">{blog.title}</div>
           <p className="para">~ { blog.author }</p>
           <div className="body">{ blog.body }</div>
-          <button className="delete" onClick={handleClick}>Delete Blog</button>
+          <button className="delete" onClick={() => { handleClick(blog._id) }}>Delete Blog</button>
         </div>
       )}
     </div>
