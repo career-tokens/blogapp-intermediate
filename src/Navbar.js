@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
-import { auth, db, logout } from "./Firebase";
+import { auth, db } from "./Firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import Catchy from "./Catchy";
 
 function Navbar() {
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading ] = useAuthState(auth);
   const [initials, setInitials] = useState("");
   const navigate = useNavigate();
 

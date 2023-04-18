@@ -1,9 +1,9 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useState } from "react";
+/**import { useState } from "react";*/
 import useFetch from "./useFetch";
 import './BlogDetails.css';
-import { dab } from "./Firebase";
-import { get,child,ref, remove } from "firebase/database";
+/**import { dab } from "./Firebase";
+import { get,child,ref, remove } from "firebase/database";*/
 
 const BlogDetails = () => {
   const { id } = useParams();

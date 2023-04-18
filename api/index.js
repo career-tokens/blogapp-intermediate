@@ -5,7 +5,7 @@ require('dotenv').config();
 const Blog = require('./models/Blog.js');
 const mongoose = require('mongoose');
 
-const allowedOrigins = ['https://blogapp-ten-gamma.vercel.app']; 
+const allowedOrigins = ['http://localhost:3000']; 
 
 const corsOptions = {
   origin: function (origin, callback) {

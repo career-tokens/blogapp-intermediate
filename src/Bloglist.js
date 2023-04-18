@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import { dab } from "./Firebase";
-import {  ref, remove } from "firebase/database";
+/**import { dab } from "./Firebase";
+import {  ref, remove } from "firebase/database";*/
 
 const Bloglist = ({ title }) => {
     const [blogs, setBlogs] = useState([]);
