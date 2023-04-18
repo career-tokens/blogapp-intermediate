@@ -5,7 +5,7 @@ require('dotenv').config();
 const Blog = require('./models/Blog.js');
 const mongoose = require('mongoose');
 
-const allowedOrigins = ['http://localhost:3000']; 
+const allowedOrigins = ['https://blogapp-ten-gamma.vercel.app']; 
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -26,7 +26,7 @@ app.get('/api/test', (req, res) => {
 
 app.post('/api/blogs', async (req, res) => {
     console.log("mongodb+srv://heellomeelo:x1B8T6t09kEA3jiI@cluster0.gqhkpdk.mongodb.net/?retryWrites=true&w=majority");
-    await mongoose.connect(`mongodb+srv://heellomeelo:x1B8T6t09kEA3jiI@cluster0.gqhkpdk.mongodb.net/?retryWrites=true&w=majority`);
+    await mongoose.connect(`mongodb+srv://heellomeelo:x1B8T6t09kEA3jiI@cluster0.gqhkpdk.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true });
     const { title,author,body} = req.body;
     const blog = await Blog.create(
         { title,body,author} 
@@ -34,12 +34,12 @@ app.post('/api/blogs', async (req, res) => {
     res.json(blog);
 });
 app.get('/api/transactions', async (req, res) => {
-    await mongoose.connect(`mongodb+srv://heellomeelo:x1B8T6t09kEA3jiI@cluster0.gqhkpdk.mongodb.net/?retryWrites=true&w=majority`);
+    await mongoose.connect(`mongodb+srv://heellomeelo:x1B8T6t09kEA3jiI@cluster0.gqhkpdk.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true });
     const blogs= await Blog.find();
     res.json(blogs); 
 })
 app.get('/api/transactions/:id', async (req, res) => {
-  await mongoose.connect(`mongodb+srv://heellomeelo:x1B8T6t09kEA3jiI@cluster0.gqhkpdk.mongodb.net/?retryWrites=true&w=majority`);
+  await mongoose.connect(`mongodb+srv://heellomeelo:x1B8T6t09kEA3jiI@cluster0.gqhkpdk.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true });
   const { id } = req.params;
   const blog = await Blog.findById(id);
   if (blog) {
@@ -49,7 +49,7 @@ app.get('/api/transactions/:id', async (req, res) => {
   }
 });
 app.delete('/api/transactions/:id', async (req, res) => {
-  await mongoose.connect(`mongodb+srv://heellomeelo:x1B8T6t09kEA3jiI@cluster0.gqhkpdk.mongodb.net/?retryWrites=true&w=majority`);
+  await mongoose.connect(`mongodb+srv://heellomeelo:x1B8T6t09kEA3jiI@cluster0.gqhkpdk.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true });
   const { id } = req.params;
   const blog = await Blog.findByIdAndDelete(id);
   if (blog) {
