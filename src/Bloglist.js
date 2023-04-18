@@ -8,8 +8,9 @@ import {  ref, remove } from "firebase/database";
 const Bloglist = ({ title }) => {
     const [blogs, setBlogs] = useState([]);
 
-    useEffect(() => {
-      fetch('https://react-blog-937a6-default-rtdb.firebaseio.com//blogs.json')
+  useEffect(() => {
+    const url = 'http://localhost:3001/api/transactions';
+      fetch(url)
         .then(res => res.json())
         .then(data => {
           if (data&&Object.keys(data).length > 0) {
@@ -39,7 +40,7 @@ const Bloglist = ({ title }) => {
     <h2>{title}</h2>
     {blogs&&blogs.map((blog) =>(
         <div className="blog" key={blog.id}>
-            <Link className="Link" to={`/blogs/${blog.id}`}>{/**back comma very imp */}
+            <Link className="Link" to={`/blogs/${blog._id}`}>{/**back comma very imp */}
                 <div className="blogtitle">{blog.title}</div>
                 <div className="blogauthor">~ {blog.author}</div>
             </Link>

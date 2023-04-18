@@ -16,7 +16,8 @@ const Create = () => {
     e.preventDefault();
     const blog = { title, body, author };
     setIsPending(true);
-    fetch('https://react-blog-937a6-default-rtdb.firebaseio.com/blogs.json', {
+    const url = 'http://localhost:3001/api/blogs';
+    fetch(url, {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog)

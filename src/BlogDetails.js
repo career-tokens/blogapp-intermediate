@@ -8,7 +8,7 @@ import { get,child,ref, remove } from "firebase/database";
 const BlogDetails = () => {
   const { id } = useParams();
   /**const [blog, setBlog] = useState('');*/
-  const { data: blog, error, isPending } = useFetch(`https://react-blog-937a6-default-rtdb.firebaseio.com/blogs/${id}.json`);
+  const { data: blog, error, isPending } = useFetch(`http://localhost:3001/api/transactions/${id}`);
   /**get(child(ref(dab), `blogs/${id}`)).then((snapshot) => {
     if (snapshot.exists()) {
      setBlog(snapshot.val());
