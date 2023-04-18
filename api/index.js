@@ -48,5 +48,16 @@ app.get('/api/transactions/:id', async (req, res) => {
       res.status(404).json({ error: 'Blog not found' });
   }
 });
+app.delete('/api/transactions/:id', async (req, res) => {
+  await mongoose.connect(`mongodb+srv://heellomeelo:x1B8T6t09kEA3jiI@cluster0.gqhkpdk.mongodb.net/?retryWrites=true&w=majority`);
+  const { id } = req.params;
+  const blog = await Blog.findByIdAndDelete(id);
+  if (blog) {
+      res.json(blog);
+  } else {
+      res.status(404).json({ error: 'Blog not found' });
+  }
+});
 
 app.listen(3001);
+
