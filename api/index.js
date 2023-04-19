@@ -5,7 +5,7 @@ require('dotenv').config();
 const Blog = require('./models/Blog.js');
 const mongoose = require('mongoose');
 
-const allowedOrigins = ['http://localhost:3000', 'https://zippy-taffy-e0835b.netlify.app']; 
+const allowedOrigins = ['http://localhost:3000', 'https://zippy-taffy-e0835b.netlify.app','blogapp-git-master-mainakkaniam.vercel.app']; 
 
 const corsOptions = {
   origin: function (origin, callback) {
