@@ -8,7 +8,7 @@ function Dashboard() {
   const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
   const navigate = useNavigate();
-  const fetchUserName = async () => {
+  /**const fetchUserName = async () => {
     try {
       const q = query(collection(db, "users"), where("uid", "==", user?.uid));
       const doc = await getDocs(q);
@@ -18,12 +18,12 @@ function Dashboard() {
       console.error(err);
       alert("An error occured while fetching user data");
     }
-  };
+  };*/
   useEffect(() => {
     if (loading) return;
     if (!user) return navigate("/login");
-    fetchUserName();
-  }, [user, loading]);
+   // fetchUserName();
+  });
   return (
     <div className="dashboard">
        <div className="dashboard__container">
@@ -32,7 +32,8 @@ function Dashboard() {
          <div>{user?.email}</div>
          <button className="dashboard__btn" onClick={logout}>
           Logout
-         </button>
+        </button>
+        <button className="gotohome" onClick={()=>{navigate("/")}}>Go To Home</button>
        </div>
      </div>
   );

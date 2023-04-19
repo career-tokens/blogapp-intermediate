@@ -11,7 +11,7 @@ function Navbar() {
   const [initials, setInitials] = useState("");
   const navigate = useNavigate();
 
-  const fetchUserInitials = async () => {
+  /**const fetchUserInitials = async () => {
     try {
       const q = query(collection(db, "users"), where("uid", "==", user?.uid));
       const doc = await getDocs(q);
@@ -27,12 +27,12 @@ function Navbar() {
       console.error(err);
       alert("An error occured while fetching user data");
     }
-  };
+  };*/
 
   useEffect(() => {
     if (loading) return;
     if (!user) return navigate("/login");
-    fetchUserInitials();
+   // fetchUserInitials();
   }, [user, loading]);
 
   return (
@@ -47,7 +47,7 @@ function Navbar() {
             New Blog
           </a>
           <button className="user-button" onClick={() => navigate("/dashboard")}>
-            {initials}
+            You
           </button>
         </div>
       </div>

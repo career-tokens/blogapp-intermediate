@@ -16,7 +16,7 @@ const Create = () => {
     e.preventDefault();
     const blog = { title, body, author };
     setIsPending(true);
-    const url = `/api/blogs`;
+    const url = `http://localhost:3001/api/blogs`;
     fetch(url, {
       method: 'POST',
       headers: { "Content-Type": "application/json" },

@@ -18,6 +18,15 @@
     padding: 10px;
     font-size: 18px;
     margin-top: 10px;
+    margin-bottom:10px;
+    border: none;
+    color: white;
+    background-color: black;
+  }
+  .gotohome{
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 10px;
     border: none;
     color: white;
     background-color: black;
