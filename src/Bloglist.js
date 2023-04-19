@@ -9,7 +9,7 @@ const Bloglist = ({ title }) => {
     const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    const url = `${process.env.REACT_APP_API_URL}/transactions`;
+    const url = `/transactions`;
       fetch(url)
         .then(res => res.json())
         .then(data => {
@@ -29,7 +29,7 @@ const Bloglist = ({ title }) => {
     
     const navigate = useNavigate();
     const handleDelete = (id) => {
-      fetch(`${process.env.REACT_APP_API_URL}/transactions/${id}`, {
+      fetch(`/transactions/${id}`, {
         method: 'DELETE'
       }).then(() => {
         navigate('/');

@@ -8,7 +8,7 @@ import { get,child,ref, remove } from "firebase/database";*/
 const BlogDetails = () => {
   const { id } = useParams();
   /**const [blog, setBlog] = useState('');*/
-  const { data: blog, error, isPending } = useFetch(`${process.env.REACT_APP_API_URL}/transactions/${id}`);
+  const { data: blog, error, isPending } = useFetch(`/transactions/${id}`);
   /**get(child(ref(dab), `blogs/${id}`)).then((snapshot) => {
     if (snapshot.exists()) {
      setBlog(snapshot.val());
@@ -20,7 +20,7 @@ const BlogDetails = () => {
   const navigate = useNavigate();
 
   const handleClick = (id) => {
-    fetch(`${process.env.REACT_APP_API_URL}/transactions/${id}`, {
+    fetch(`/transactions/${id}`, {
       method: 'DELETE'
     }).then(() => {
       navigate('/');
