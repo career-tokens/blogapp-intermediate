@@ -1,3 +1,6 @@
+(go to blogapp and use npm start to launch react app)
+(go to blogapp/api and use nodemon index.js to launch express app (backend))
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
