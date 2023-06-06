@@ -16,7 +16,7 @@ const Create = () => {
     e.preventDefault();
     const blog = { title, body, author };
     setIsPending(true);
-    const url = `http://localhost:3001/api/blogs`;
+    const url = `https://blogapp-cvdo.onrender.com/api/blogs`;
     fetch(url, {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
