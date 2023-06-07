@@ -15,7 +15,7 @@ console.log(process.env.MONGO_URI);
 app.use(cookieParser());
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
+    origin: 'https://blogapp-k5ni.vercel.app',
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
