@@ -90,7 +90,7 @@ const Create = () => {
           value={keyword}
           onChange={(e) => setKeyword(e.target.value)}
         />
-        <div style={{ marginLeft: '22px', width: '166px' }}>
+        <div style={{ marginLeft: '22px', width: '166px',marginTop:'-10px' }}>
         <button onClick={handleSearch}>Search Images</button>
         </div>
 
@@ -107,7 +107,7 @@ const Create = () => {
                   alt="Unsplash Img"
                   width="200"
                   height="200"
-                  style={{ cursor: 'pointer', border: selectedImage === image.url ? '2px solid blue' : 'none' }}
+                  style={{ cursor: 'pointer', border: selectedImage === image.url ? '2px solid blue' : 'none',borderRadius:'31px' }}
                   onClick={() => setSelectedImage(image.url)}
                 />
               </div>
@@ -115,7 +115,7 @@ const Create = () => {
           </div>
         </div>
 
-        {!isPending && <button onClick={handleSubmitBlog}>Add Blog</button>}
+        {!isPending && <button style={{marginTop:'20px'}} onClick={handleSubmitBlog}>Add Blog</button>}
         {isPending && <button disabled>Adding Blog...</button>}
       </div>
     </div>
