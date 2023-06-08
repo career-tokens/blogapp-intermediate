@@ -9,10 +9,39 @@ const Create = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [author, setAuthor] = useState('');
+  const [keyword, setKeyword] = useState('');
+  const [imageList, setImageList] = useState([]);
+  const [selectedImage, setSelectedImage] = useState('');
   const [isPending, setIsPending] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSearch = async () => {
+    try {
+      const response = await fetch(
+        `https://api.unsplash.com/search/photos?page=1&query=${keyword}&client_id=N5kgKBHAjaqvTqLZG8j-k9h4nmGm7QM5bhUzTtBDOco`
+      );
+      const data = await response.json();
+      //console.log(data.results[0]);
+      if (data.results) {
+        const formattedImages = [];
+        for (let i = 0; i < 10; i++) {
+          const image = data.results[i];
+          console.log(image.urls)
+          image.urls&&formattedImages.push({
+            id: image.id,
+            url: image.urls.raw,
+          });
+        }
+        setImageList(formattedImages);
+      }
+    } catch (error) {
+      console.error('Error searching images:', error);
+    }
+  };
+  
+  
+
+  const handleSubmitBlog = (e) => {
     e.preventDefault();
     const blog = { title, body, author };
     setIsPending(true);
@@ -31,7 +60,7 @@ const Create = () => {
   return (
     <div className="create">
       <h2 className="head">Add a New Blog</h2>
-      <form onSubmit={handleSubmit}>
+      <div className="form" >
         <label>Title:</label>
         <input 
           type="text" 
@@ -53,9 +82,42 @@ const Create = () => {
           onChange={(e) => setBody(e.target.value)}
           className="body"
         ></textarea> 
-        {!isPending && <button>Add Blog</button>}
-        {isPending&&<button disabled>Adding Blog...</button>}
-      </form>
+        <label>Keyword:</label>
+        <div style={{display:"flex"}}>
+          <input
+          className="search-image"
+          type="text"
+          value={keyword}
+          onChange={(e) => setKeyword(e.target.value)}
+        />
+        <div style={{ marginLeft: '22px', width: '166px' }}>
+        <button onClick={handleSearch}>Search Images</button>
+        </div>
+
+        </div>
+      
+        
+
+        <div className="images" >
+          <div style={{ display: 'flex' }}>
+            {imageList.map((image) => (
+              <div key={image.id} style={{ margin: '10px' }}>
+                <img
+                  src={image.url}
+                  alt="Unsplash Img"
+                  width="200"
+                  height="200"
+                  style={{ cursor: 'pointer', border: selectedImage === image.url ? '2px solid blue' : 'none' }}
+                  onClick={() => setSelectedImage(image.url)}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {!isPending && <button onClick={handleSubmitBlog}>Add Blog</button>}
+        {isPending && <button disabled>Adding Blog...</button>}
+      </div>
     </div>
   );
 }
