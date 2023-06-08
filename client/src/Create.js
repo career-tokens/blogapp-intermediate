@@ -43,7 +43,7 @@ const Create = () => {
 
   const handleSubmitBlog = (e) => {
     e.preventDefault();
-    const blog = { title, body, author };
+    const blog = { title, body, author ,selectedImage };
     setIsPending(true);
     const url = `https://blogapp-cvdo.onrender.com/api/blogs`;
     fetch(url, {
