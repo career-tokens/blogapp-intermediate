@@ -13,6 +13,7 @@ const Bloglist = ({ title }) => {
       fetch(url)
         .then(res => res.json())
         .then(data => {
+          console.log(data);
           if (data&&Object.keys(data).length > 0) {
             const blogsArray = Object.keys(data).map(key => {
               return { id: key, ...data[key] };
