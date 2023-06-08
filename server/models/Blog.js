@@ -4,8 +4,9 @@ const BlogSchema = new Schema({
     title: { type: String, required: true },
     author: { type: String, required: true },
     body: { type: String, required: true },
-    /**tags: { type: [String] },
-    createdAt: { type: Date, default: Date.now },*/
+    selectedImage:{type:String,required:true},
+    keyword: { type: [String],required:true },
+    date: { type: Date, default: Date.now },
 });
 
 export const Blog = model('Blog', BlogSchema)

@@ -43,8 +43,11 @@ const Create = () => {
 
   const handleSubmitBlog = (e) => {
     e.preventDefault();
-    const blog = { title, body, author ,selectedImage };
+    const currentDate = new Date().toISOString(); // Get the current date in ISO format
+    const blog = { title, body, author, selectedImage, keyword, date: currentDate };
     setIsPending(true);
+    //http://localhost:3001/api/blogs use it when you have not committed (deployed backedn wont work the
+    //way you want , so to use the backend locally use localhost
     const url = `https://blogapp-cvdo.onrender.com/api/blogs`;
     fetch(url, {
       method: 'POST',

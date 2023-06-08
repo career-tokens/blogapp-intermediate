@@ -27,8 +27,8 @@ app.get("/api/test", (req, res) => {
 });
 
 app.post("/api/blogs", async (req, res) => {
-  const { title, author, body } = req.body;
-  const blog = await Blog.create({ title, body, author });
+  const { title, author, body ,selectedImage ,keyword ,date } = req.body;
+  const blog = await Blog.create({ title, author, body ,selectedImage ,keyword ,date });
   res.json(blog);
 });
 
