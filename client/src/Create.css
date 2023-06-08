@@ -70,11 +70,12 @@
   /* Media query for mobile screens */
   @media (max-width: 600px) {
     .create {
-      max-width: 800px;
+      max-width: 600px;
       margin: 0 auto;
       padding: 20px;
       margin-left:2px;
       margin-right:25px;
+      height:100%;
     }
     
     .head {
