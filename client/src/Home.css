@@ -18,11 +18,13 @@
     height:209px;
 }
 .blogtitle{
-    font-size:35px;
-    color:white;
-    text-align:left;
-    font-style:Times New Roman;
-    margin-left:20px;
+    font-size: 35px;
+    color: white;
+    text-align: left;
+    font-style: Times New Roman;
+    margin-left: 20px;
+    width: 564px;
+    height: 112px;
 }
 .blogtitle:hover{
     text-decoration:underline;
@@ -66,10 +68,10 @@ h2{
 @media (min-width: 700px){
     .image {
         width: 263px;
-        margin-left: 605px;
+        margin-left: 622px;
         border-radius: 13px;
         border: 2px solid white;
-        margin-top: -76px;
+        margin-top: -144px;
         height: 195px;
       }
   .date {
