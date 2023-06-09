@@ -34,3 +34,11 @@
     margin-bottom:20px;
     color:#808080;
 }
+@media (max-width: 600px) {
+    .trending {
+        display: none;
+    }
+    .banner {
+        display: none;
+    }
+}

@@ -104,13 +104,14 @@ h2{
 @media (max-width: 600px) {
     h2{
         font-size: 40px;
-color: blue;
-margin-right: 355px;
-background-color: white;
-border-radius: 0.5rem;
-padding: 5px;
-margin-left: 349px;
-width: 170px;
+        color: blue;
+        margin-right: 355px;
+        background-color: white;
+        border-radius: 1.5rem;
+        padding: 5px;
+        margin-left: 349px;
+        width: 170px;
+        border: 3px solid black;
     }
     .blog {
         width: 376px;
