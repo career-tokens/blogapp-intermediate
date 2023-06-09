@@ -13,7 +13,7 @@ const Bloglist = ({ title }) => {
       fetch(url)
         .then(res => res.json())
         .then(data => {
-          console.log(data);
+         // console.log(data);
           if (data&&Object.keys(data).length > 0) {
             const blogsArray = Object.keys(data).map(key => {
               return { id: key, ...data[key] };
@@ -43,11 +43,27 @@ const Bloglist = ({ title }) => {
     <div className="home2">
     <h2>{title}</h2>
     {blogs&&blogs.map((blog) =>(
-        <div className="blog" key={blog.id}>
+      <div className="blog" key={blog.id} >
+       
+       <div style={{display:'flex'}}>
+
             <Link className="Link" to={`/blogs/${blog._id}`}>{/**back comma very imp */}
                 <div className="blogtitle">{blog.title}</div>
-                <div className="blogauthor">~ {blog.author}</div>
-            </Link>
+            <div className="blogauthor">~ {blog.author}</div>
+            <div >
+            <img className="image" src={blog.selectedImage} alt="img"  />
+          </div>
+            <div className="date-keyword">
+              <div className="keyword">{blog.keyword}</div>
+              <div className="date">
+              {blog.date.substring(0, 10)}
+                </div>
+
+            </div>
+        </Link>
+
+        </div>
+        
             <div className="button">
                 <button className="btn" onClick={() => { handleDelete(blog._id) }}>Delete Blog</button>
             </div>

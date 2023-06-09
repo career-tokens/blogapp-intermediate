@@ -8,13 +8,14 @@
     /**FAF8F1*/
 }
 .blog{
-    width:1000px;
+    width:895px;
     padding:12px;
     margin-left:-360px;
     margin-bottom:20px;
     background-color:black;
     transition: transform 0.3s ease-in-out;
     border-radius:2rem;
+    height:209px;
 }
 .blogtitle{
     font-size:35px;
@@ -51,7 +52,7 @@ h2{
 .button{
     text-align:center;
     padding:20px;
-    margin-top:24px;
+    margin-top:-55px;
    
 }
 .btn{
@@ -62,3 +63,130 @@ h2{
 .Link{
     text-decoration:none;
 }
+@media (min-width: 700px){
+    .image {
+        width: 263px;
+        margin-left: 605px;
+        border-radius: 13px;
+        border: 2px solid white;
+        margin-top: -76px;
+        height: 195px;
+      }
+  .date {
+    color: white;
+    margin-top: 44px;
+    margin-left: 10px;
+    font-size: 21px;
+    background-color: green;
+    border: 1px solid white;
+    padding: 4px 8px 4px 9px;
+    border-radius: 9px;
+    margin-bottom: 3px;
+  }
+  .keyword {
+    color: white;
+    margin-top: 41px;
+    margin-left: 10px;
+    font-size: 26px;
+    background-color: green;
+    border: 1px solid white;
+    padding: 4px 8px 4px 9px;
+    border-radius: 9px;
+  }
+  .date-keyword{
+   display:flex;
+   margin-top:-90px;
+  }
+  
+}
+  
+
+@media (max-width: 600px) {
+    h2{
+        font-size: 40px;
+color: blue;
+margin-right: 355px;
+background-color: white;
+border-radius: 0.5rem;
+padding: 5px;
+margin-left: 349px;
+width: 170px;
+    }
+    .blog {
+        width: 400px;
+        padding: 12px;
+        margin-left: 1px;
+        margin-bottom: 20px;
+        background-color: black;
+        transition: transform 0.3s ease-in-out;
+        border-radius: 2rem;
+        height: 170px;
+      }
+      .blogauthor {
+        font-size: 21px;
+        color: #865DFF;
+        text-align: left;
+        margin-left: 20px;
+        width: 257px;
+      }
+      .blogtitle{     font-size: 24px;
+        color: white;
+        text-align: left;
+        font-style: Times New Roman;
+        margin-left: 20px;
+        width: 242px;
+        height: 104px;
+        }
+
+          
+        .image
+        {
+            width: 123px;
+            margin-left: 281px;
+            border-radius: 13px;
+            border: 2px solid white;
+            height: 105px;
+            margin-bottom: 44px;
+            margin-top: -146px;
+          }
+          .keyword {
+            color: white;
+            margin-top: -5px;
+            margin-left: 10px;
+            font-size: 19px;
+            background-color: green;
+            border-radius: 9px;
+            border: 1px solid white;
+            padding-right: 5px;
+            padding-left: 5px;
+            margin-bottom: 16px;
+          
+          }
+          .date
+          {
+            color: white;
+            margin-top: -6px;
+            margin-left: 10px;
+            font-size: 17px;
+            background-color: green;
+            padding: 3px;
+            border-radius: 9px;
+            margin-bottom: 15px;
+            border: 1px solid white;
+            width: 90px;
+            display: inline-block;
+    }
+    .date-keyword {
+        display: flex;
+        flex-direction: row;
+        width: 271px;
+      }
+    .button{
+        text-align: center;
+        padding: 6px;
+        margin-top: -59px;
+        margin-left: 285px;
+        width: 104px;
+    }
+
+    }      
