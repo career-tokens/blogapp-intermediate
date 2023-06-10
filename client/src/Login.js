@@ -38,7 +38,7 @@ function Login() {
         >
           Login
         </button>
-        <button className="login__btn login__google" onClick={signInWithGoogle}>
+        <button className="login__btn login__google" onClick={signInWithGoogle} style={{display:'none'}}>
           Login with Google
         </button>
         <div>

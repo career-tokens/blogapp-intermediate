@@ -51,6 +51,7 @@ function Register() {
         <button
           className="register__btn register__google"
           onClick={signInWithGoogle}
+          style={{display: 'none'}}
         >
           Register with Google
         </button>
