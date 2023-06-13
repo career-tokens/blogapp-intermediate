@@ -1,9 +1,11 @@
+@media (min-width: 700px) {
 .create {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     
   }
+}
   
   .head {
     color:green;
@@ -69,30 +71,24 @@
   
   /* Media query for mobile screens */
   @media (max-width: 600px) {
-    .create {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      margin-left:2px;
-      margin-right:25px;
-      height:939px;
-    }
     
     .head {
-      color:green;
-      font-size: 32px;
-      margin-bottom: 20px;
-      margin-top:-12px;
-      margin-left:-5px;
-      //display:inline;
-      width:73%;
+      color: green;
+      font-size: 4vh;
+      margin-bottom: 4vh;
+      margin-top: 2vh;
+      margin-left: 2vw;
+      //display: inline;
+      width: 91vw;
+      text-align: center;
     }
     
     .form {
-      margin-top:20px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      margin-left: 2vh;
+      width: 37vh;
     }
     
     label {
@@ -103,12 +99,11 @@
     }
     
     input[type="text"], textarea {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      margin-bottom: 20px;
-      border: 3px solid #40a9ff;
-      border-radius:1rem;
+      width: 84vw;
+      font-size: 2vh;
+      margin-bottom: 2vh;
+      border: .4vh solid #40a9ff;
+      border-radius: 1em;
     }
   
     .body{

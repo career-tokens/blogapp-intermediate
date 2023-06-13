@@ -42,13 +42,13 @@ const Bloglist = ({ title }) => {
     <>  
     <div className="home2">
     <h2>{title}</h2>
-    {blogs&&blogs.map((blog) =>(
-      <div className="blog" key={blog.id} >
+    {blogs&&blogs.map((blog,index) =>(
+      <div className={`blog ${index % 2 === 0 ? 'even evenshadow' : 'odd oddshadow'}`} key={blog.id}>
        
        <div style={{display:'flex'}}>
 
             <Link className="Link" to={`/blogs/${blog._id}`}>{/**back comma very imp */}
-                <div className="blogtitle">{blog.title}</div>
+            <div className={`blogtitle ${index % 2 === 0 ? 'even' : 'odd'}`}>{blog.title}</div>
             <div className="blogauthor">~ {blog.author}</div>
             <div >
             <img className="image" src={blog.selectedImage} alt="img"  />

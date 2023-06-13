@@ -1,3 +1,10 @@
+.links {
+  font-family: 'Slabo 27px', serif;
+}
+.user-button{
+  font-family: 'Slabo 27px', serif; 
+}
+
 @media (min-width:700px){
 .App{
   text-align:center;
@@ -14,7 +21,7 @@
 .name{
   margin-right:787px;
   font-size:50px;
-  width:341px;
+  width:346px;
 }
 .links{
   display:flex;
@@ -22,7 +29,7 @@
 }
 .name{
   color:#F4F8FC;
-  
+  font-family: 'DynaPuff', cursive;
 }
 .nav a{
   font-size:20px;
@@ -61,58 +68,54 @@
     text-align:center;
   }
   .nav{
-    //display:flex;
-    padding:25px;
-    align-items:center;
-    margin:0 auto;
-    border-bottom:1px solid black;
-    background-color:rgb(25, 28, 32);
-    height:100px;
+    background-color: rgb(43, 35, 39);
+    height: 23vh;
   }
   .name{
-    font-size: 43px;
-    width: 341px;
-    margin-top: -11px;
-    margin-bottom: 14px;
-    margin-left: 58px;
+    font-size: 6vh;
+    width: 100vw;
+    font-family: 'DynaPuff', cursive;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
   }
   .links{
     display: flex;
-    margin-left: 39px;
+    padding-left: 13vw;
   }
   .name{
     color:#F4F8FC;
     
   }
   .nav a{
-    font-size:20px;
-    padding:15px;
-    text-decoration:none;
-    color:#FDF4F5;
+    font-size: 123%;
+    padding: 4%;
+    text-decoration: none;
+    color: #FDF4F5;
   }
   .nav a:hover{
     text-decoration:line-through;
   }
   .home{
-    margin-right:17px;
-    background-color:green;
-    border-radius:5rem;
+    margin-right: 4vw;
+    background-color: green;
+    border-radius: 5rem;
   }
   .al{
-    margin-right:-33px;
-    background-color:green;
-    border-radius:5rem;
+    margin-right: -9vw;
+    background-color: green;
+    border-radius: 5rem;
   }
   .user-button{
     background-color: #008CBA;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      border-radius: 1.5rem;
-      margin-left: 47px;
-      font-size:25px;
+    color: #fff;
+    border: none;
+    padding: 4% 5%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 1.5em;
+    margin-left: 12vw;
+    font-size: 142%;
   }
 }

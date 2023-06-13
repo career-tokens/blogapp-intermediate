@@ -1,9 +1,18 @@
+.even{
+    color:black;
+    background-color:white;
+}
+.odd{
+    color:white;
+    background-color:black;
+}
+
 .home2{
     display:flex;
     align-items:center;
     margin:0 auto;
     flex-direction:column;
-    padding:30px;
+    //padding:30px;
     background-color:#4E6E81;
     /**FAF8F1*/
 }
@@ -12,19 +21,19 @@
     padding:12px;
     margin-left:-360px;
     margin-bottom:20px;
-    background-color:black;
+    //background-color:black;
     transition: transform 0.3s ease-in-out;
     border-radius:2rem;
     height:209px;
 }
 .blogtitle{
     font-size: 35px;
-    color: white;
+    //color: white;
     text-align: left;
-    font-style: Times New Roman;
     margin-left: 20px;
     width: 564px;
     height: 112px;
+    font-family: 'Jura', sans-serif;
 }
 .blogtitle:hover{
     text-decoration:underline;
@@ -34,22 +43,19 @@
     color: #865DFF;
     text-align:left;
     margin-left:20px;
+    font-family: 'Squada One', cursive;
 }
 .blogauthor:hover{
     text-decoration:underline;
 }
-.blog:hover{
-    transform: scale(1.05);
-    outline: 3px solid white; 
-    /**40a9ff;*/
-}
 h2{
     font-size:40px;
-    color:blue;;/**#E80F88;*/
+    color:black;/**#E80F88;*/
     margin-right:355px;
     background-color:white;
     border-radius:0.5rem;
     padding:5px;
+    font-family: 'Bruno Ace SC', cursive;
 }
 .button{
     text-align:center;
@@ -58,14 +64,23 @@ h2{
    
 }
 .btn{
-    padding:8px;
-    font-size:17px;
-    border-radius:1.5rem;
+    padding: 0.6vh;
+    font-size: 2vh;
+    border-radius: 1.5em;
 }
 .Link{
     text-decoration:none;
 }
 @media (min-width: 700px){
+
+    .evenshadow:hover{
+        transform: scale(1.05);
+        outline: 3px solid black; 
+    }
+    .oddshadow:hover{
+        transform: scale(1.05);
+        outline: 3px solid white; 
+    }
     .image {
         width: 263px;
         margin-left: 622px;
@@ -104,92 +119,99 @@ h2{
   
 
 @media (max-width: 600px) {
+
+    .evenshadow{
+        box-shadow: 10px 12px 7px black;
+    }
+    .oddshadow{
+        box-shadow: 10px 12px 2px white;
+    }
     h2{
-        font-size: 40px;
-        color: blue;
-        margin-right: 355px;
+        font-size: 4vh;
+        color: black;
         background-color: white;
-        border-radius: 1.5rem;
-        padding: 5px;
-        margin-left: 349px;
-        width: 170px;
-        border: 3px solid black;
+        border-radius: 1.5em;
+        margin-left: 51vh;
+        width: 26vh;
+        border: 0.5vh solid black;
+        margin-right: 51vh;
+        padding: 0.5vh;
     }
     .blog {
-        width: 376px;
-        padding: 12px;
-        margin-left: 1px;
-        margin-bottom: 20px;
-        background-color: black;
+        width: 83vw;
+        padding: 4%;
+        margin-left: -2vw;
+        margin-bottom: 12%;
+        //background-color: black;
         transition: transform 0.3s ease-in-out;
         border-radius: 2rem;
-        height: 170px;
+        height: 26vh;
       }
       .blogauthor {
-        font-size: 21px;
+        font-size: 3vh;
         color: #865DFF;
         text-align: left;
-        margin-left: 20px;
-        width: 257px;
+        margin-left: 1vh;
+        width: 28vh;
       }
-      .blogtitle{     font-size: 24px;
-        color: white;
+      .blogtitle{    
+        font-size: 3vh;
+        //color: white;
         text-align: left;
         font-style: Times New Roman;
-        margin-left: 20px;
-        width: 242px;
-        height: 104px;
+        margin-left: 3vw;
+        width: 49vw;
+        height: 18vh;
         }
 
           
         .image
         {
-            width: 112px;
-            margin-left: 263px;
-            border-radius: 13px;
-            border: 2px solid white;
-            height: 105px;
-            margin-bottom: 44px;
-            margin-top: -146px;
+            width: 32vw;
+            margin-left: 53vw;
+            border-radius: 1em;
+            border: 0.6vw solid white;
+            height: 17vh;
+            margin-bottom: 8vh;
+            margin-top: -22vh;
           }
           .keyword {
             color: white;
-            margin-top: -5px;
-            margin-left: 10px;
-            font-size: 19px;
+            margin-top: -3vh;
+            margin-left: 0.4vh;
+            font-size: 2.4vh;
             background-color: green;
-            border-radius: 9px;
-            border: 1px solid white;
-            padding-right: 5px;
-            padding-left: 5px;
-            margin-bottom: 16px;
+            border-radius: 1vh;
+            border: .2vh solid white;
+            padding-right: 1.2vw;
+            padding-left: 1vw;
+            margin-bottom: 4.8vh;
           
           }
           .date
           {
             color: white;
-            margin-top: -6px;
-            margin-left: 10px;
-            font-size: 17px;
+            margin-top: -3.4vh;
+            margin-left: 01vh;
+            font-size: 2.4vh;
             background-color: green;
-            padding: 3px;
-            border-radius: 9px;
-            margin-bottom: 15px;
-            border: 1px solid white;
-            width: 90px;
+            padding: 0.30vh;
+            border-radius: 1.2vh;
+            margin-bottom: 4.4vh;
+            border: 0.2vw solid white;
             display: inline-block;
     }
     .date-keyword {
         display: flex;
         flex-direction: row;
-        width: 271px;
+        width: 66vw;
       }
     .button{
         text-align: center;
-        padding: 6px;
-        margin-top: -59px;
-        margin-left: 274px;
-        width: 104px;
+        padding: 0.3vh;
+        margin-top: -9vh;
+        margin-left: 58vw;
+        width: 30vw;
     }
 
     }      
