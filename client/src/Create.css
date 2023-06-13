@@ -5,14 +5,18 @@
     padding: 20px;
     
   }
-}
-  
   .head {
-    color:green;
+    color: black;
     font-size: 32px;
     margin-bottom: 40px;
-    margin-top:-12px;
+    margin-top: -12px;
+    border: 1vh solid black;
+    width: 45vh;
+    border-radius: 1em;
   }
+}
+  
+
   
   .form {
     display: flex;
