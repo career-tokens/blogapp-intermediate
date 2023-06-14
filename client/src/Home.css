@@ -1,6 +1,6 @@
 .even{
     color:black;
-    background-color:white;
+    background-color:#ECF8F9;
 }
 .odd{
     color:white;
@@ -15,7 +15,7 @@
     //padding:30px;
     background-color:#4E6E81;
     /**FAF8F1*/
-    background-image:url('./peakpx (1).jpg')
+    background-image:url('./images/peakpx.jpg')
 }
 .blog{
     width:895px;
