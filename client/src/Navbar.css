@@ -71,7 +71,7 @@
   .nav{
     background-color: rgb(43, 35, 39);
     height: 23vh;
-    background-image: url('C:\Program Files (x86)\Blog-App\blogapp\client\src\navback.avif')
+    background-image: url('../images/navback.avif')
   }
   .name{
     font-size: 6vh;
