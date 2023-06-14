@@ -17,7 +17,7 @@
   border-bottom:1px solid black;
   background-color:rgb(25, 28, 32);
   height:100px;
-  background-image: url('./images/navback.avif')
+  background-image: url('../images/navback.avif')
 }
 .name{
   margin-right:787px;
