@@ -9,6 +9,7 @@ import Login from './Login';
 import Register from './Register';
 import Dashboard from './Dashboard';
 import Reset from './Reset';
+import OpeningScreen from './OpeningScreen';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route exact path="/reset" element={<Reset />} />
-          <Route exact path="/dashboard" element={<Dashboard/>} />
+          <Route exact path="/dashboard" element={<Dashboard />} />
         
         {/* Routes with Navbar */}
         <Route path="/" element={
@@ -38,6 +39,12 @@ function App() {
           <>
             <Navbar />
             <BlogDetails />
+          </>
+        } />
+        <Route exact path="/openingscreen" element={
+          <>
+            <Navbar />
+            <OpeningScreen />
           </>
         } />
       </Routes>

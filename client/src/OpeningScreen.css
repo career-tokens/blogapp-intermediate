@@ -1,0 +1,144 @@
+@media (min-width: 700px) {
+.row {
+    display: flex;
+    align-items: center;
+    height: 44vw;
+  }
+  
+  .row1 {
+    background-image: url("../images/f1back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .row2 {
+    background-image: url("../images/f2back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .row3 {
+    background-image: url("../images/f3back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .left {
+    flex: 1;
+    padding-left:5vw;
+  }
+  
+  .right {
+    flex: 1;
+    text-align: right;
+  }
+  
+
+  
+
+  
+  
+  img {
+    width: 42vw;
+    padding-right: 2vw;
+    border-radius: 25%;
+    padding-top: 2vw;
+    height: 28em;
+  }
+  .img-back1{
+    border-radius: 29%;
+    background-color: #0C134F;
+    height: 33em;
+    padding: 2%;
+    margin-right: 4vw;
+  }
+
+  .img-back2{
+    border-radius: 29%;
+    background-color: #1B9C85;
+    height: 33em;
+    padding: 2%;
+    margin-right: 4vw;
+  }
+
+  .img-back3{
+    margin-right: 4vw;
+  }
+}
+
+  @media (max-width: 600px) {
+    .row {
+      display:flex;
+      flex-direction: column-reverse;
+    }
+    .row1{
+      margin-top:2vh;
+    }
+    .left {
+      width: 100%;
+    }
+
+  
+    .right {
+      display: flex;
+      justify-content: center;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      box-shadow: 0px 5px 10px rgb(0, 0, 0);
+      border-radius: 4%;
+      width:92%
+    }
+    h3{
+      display: flex;
+      justify-content: center;
+      
+      text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+    }
+    p{
+      display: flex;
+      justify-content: center;
+      color:grey;
+    }
+    .img-back1,.img-back2,.img-back3{
+      background-color:white;
+      border-radius: 4%;
+    }
+
+    .right1 {
+      background-image: url("../images/orange.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  
+    .right2{
+      background-image: url("../images/purple.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  
+    .right3 {
+      background-image: url("../images/green.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .imgtop{
+      display:flex;
+      justify-content: center;
+    }
+    .h3_1{
+      color:#EF5B0C;
+    }
+    .h3_2{
+      color:#537FE7;
+    }
+    .h3_3{
+      color:#3D8361;
+    }
+  }
