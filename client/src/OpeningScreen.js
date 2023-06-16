@@ -2,9 +2,16 @@ import React from 'react';
 import blog from "./blog.png";
 import creative from "./image3.png";
 import write from "./write.png";
+import image1 from "./image1.webp";
+import image2 from "./image2.jpg";
+import image3 from "./image3.jpg";
 import "./OpeningScreen.css"
 
 const OpeningScreen = () => {
+ // const getScreenWidth = () => window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  //const screenWidth = getScreenWidth();
+  const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  console.log(screenWidth);
   return (
     <div>
       <div className="row row1">
@@ -14,7 +21,9 @@ const OpeningScreen = () => {
         </div>
         <div className="imgtop">
         <div className="right right1">
-            <div className="img-back1"><img src={blog} alt="First Row" />
+            <div className="img-back1">
+            <img src={screenWidth <= 600 ? blog : image1 } alt="First Row" />
+
             </div>
           
         </div>
@@ -22,18 +31,17 @@ const OpeningScreen = () => {
 
       </div>
       <div className="row row2">
+        <div className="imgtop">
+        <div className="right right2">
+                  <div className="img-back2">
+                  <img src={screenWidth <= 600 ? write : image2} alt="Second Row" />   
+                  </div>
+        </div>
+        </div>
         <div className="left">
           <h3 className="h3_2">Write your first blog!</h3>
           <p>And educate the generations to come!</p>
         </div>
-        <div className="imgtop">
-        <div className="right right2">
-                  <div className="img-back2">
-                  <img src={write} alt="Second Row" />   
-                  </div>
-        </div>
-        </div>
- 
       </div>
       <div className="row row3">
         <div className="left">
@@ -43,7 +51,7 @@ const OpeningScreen = () => {
         <div className="imgtop">
         <div className="right right3">
                   <div className="img-back3">
-                      <img src={creative} alt="Third Row" />
+                      <img src={screenWidth <= 600 ? creative : image3 } alt="Third Row" />
                   </div>
         </div>
         </div>
