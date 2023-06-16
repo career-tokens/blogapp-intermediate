@@ -1,4 +1,29 @@
 @media (min-width: 700px) {
+ /** .row{
+    animation:emerge 1.5s ease-in-out;
+  }
+  @keyframes emerge{
+    0%{
+      transform:translate(0,100%);
+      opacity:0;
+    }
+    100%{
+      transform:translate(0,0);
+      opacity:1;
+    }
+  } */
+  .reveal{
+    position:relative;
+    transform:translateY(25%);
+    opacity:0;
+    transition:all 2s ease;
+  }
+  .reveal.active{
+    transform:translateY(0%);
+    opacity:1;
+  }
+
+
 .row {
     display: flex;
     align-items: center;

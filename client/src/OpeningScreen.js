@@ -12,9 +12,23 @@ const OpeningScreen = () => {
   //const screenWidth = getScreenWidth();
   const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   console.log(screenWidth);
+  window.addEventListener('scroll', reveal);
+  function reveal() {
+    var reveals = document.querySelectorAll('.reveal');
+    for (var i = 0; i < reveals.length; i++) {
+      var windowheight = window.innerHeight;
+      var revealtop = reveals[i].getBoundingClientRect().top;
+      var revealpoint = 150;
+      if (revealtop < windowheight - revealpoint) {
+        reveals[i].classList.add('active');
+      }
+      else 
+        reveals[i].classList.remove('active')
+    }
+  }
   return (
     <div>
-      <div className="row row1">
+      <div className="row row1 reveal">
         <div className="left">
           <h3 className="h3_1">Explore the best blogs!</h3>
           <p>And expand your horizon to unknown realms! </p>
@@ -30,7 +44,7 @@ const OpeningScreen = () => {
         </div>
 
       </div>
-      <div className="row row2">
+      <div className="row row2 reveal">
         <div className="imgtop">
         <div className="right right2">
                   <div className="img-back2">
@@ -43,7 +57,7 @@ const OpeningScreen = () => {
           <p>And educate the generations to come!</p>
         </div>
       </div>
-      <div className="row row3">
+      <div className="row row3 reveal">
         <div className="left">
           <h3 className="h3_3">Keep inspiring !</h3>
           <p>Collaborate and have fun!</p>
