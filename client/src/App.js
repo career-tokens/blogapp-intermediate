@@ -10,6 +10,7 @@ import Register from './Register';
 import Dashboard from './Dashboard';
 import Reset from './Reset';
 import OpeningScreen from './OpeningScreen';
+import LoginPage from './LoginPage';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
     <Router>
       <Routes>
         {/* Routes without Navbar */}
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<Register />} />
           <Route exact path="/reset" element={<Reset />} />
           <Route exact path="/dashboard" element={<Dashboard />} />

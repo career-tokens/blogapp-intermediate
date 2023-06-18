@@ -28,6 +28,12 @@
   display:flex;
   
 }
+
+.links2{
+  display:flex;
+  margin-left:9vw;
+}
+
 .name{
   color:#F4F8FC;
   font-family: 'DynaPuff', cursive;
@@ -51,6 +57,13 @@
   background-color:green;
   border-radius:5rem;
 }
+
+.al2{
+  margin-right:-33px;
+  background-color:green;
+  border-radius:5rem;
+}
+
 .user-button{
   background-color: #008CBA;
     color: #fff;
@@ -86,6 +99,12 @@
     display: flex;
     padding-left: 13vw;
   }
+
+  .links2{
+    display: flex;
+    justify-content: center;
+  }
+
   .name{
     color:#F4F8FC;
     
@@ -109,6 +128,12 @@
     background-color: green;
     border-radius: 5rem;
   }
+
+  .al2{
+    background-color: green;
+    border-radius: 5rem;
+  }
+
   .user-button{
     background-color: #008CBA;
     color: #fff;

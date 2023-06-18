@@ -7,9 +7,19 @@ import { query, collection, getDocs, where } from "firebase/firestore";
 import Catchy from "./Catchy";
 
 function Navbar() {
-  const [user, loading ] = useAuthState(auth);
-  const [initials, setInitials] = useState("");
+  //const [user, loading ] = useAuthState(auth);
+  const [text, setText] = useState("New Blog");
   const navigate = useNavigate();
+  var user=localStorage.getItem("user");
+
+
+  useEffect(() => {
+    if (user) {
+      setText("New Blog");
+    } else {
+      setText("Login for Free!");
+    }
+  }, [user]);
 
   /**const fetchUserInitials = async () => {
     try {
@@ -29,24 +39,26 @@ function Navbar() {
     }
   };*/
 
-  useEffect(() => {
+ /**  useEffect(() => {
     if (loading) return;
     if (!user) return navigate("/login");
    // fetchUserInitials();
-  }, [user, loading]);
+  }, [user, loading]);*/
 
   return (
     <nav>
       <div className="nav" style={{ borderBottom: "none" }}>
         <div className="name">Blogger's Den</div>
-        <div className="links">
-          <a href="/" className="home">
-            Home
+        <div className={user ? "links" : "links2"}>
+        <a href="/" className="home" style={{ display: user ? "block" : "none" }}>
+          Home
+        </a>
+
+          <a href={user ? "/create" : "/login"} className={user ? "al" : "al2"}>
+            {text}
           </a>
-          <a href="/create" className="al">
-            New Blog
-          </a>
-          <button className="user-button" onClick={() => navigate("/dashboard")}>
+          <button className="user-button"  style={{ display: user ? "block" : "none" }}
+            onClick={() => navigate("/dashboard")}>
             You
           </button>
         </div>

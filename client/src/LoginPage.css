@@ -1,0 +1,111 @@
+@media (min-width: 700px) {
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-right: 24vh;
+  }
+  
+  .login-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 17vh;
+    transform: scale(1.5);
+    overflow:hidden;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #30A2FF;
+  }
+
+  .loginimage{
+
+
+    background-image: url('../images/login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 26%;
+    width: 100%;
+    background-color:white;
+    border-left: 2px solid #4070F4;
+    animation: animate 4s steps(12) infinite;
+    margin-top:6.5vh;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+}
+
+@media (max-width:600px){
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    position: relative;
+    padding: 5vw;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #30A2FF;
+  }
+
+  .loginimage{
+
+
+    background-image: url('../images/login3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .text.sec-text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 4px;
+    height: 7%;
+    width: 100%;
+    background-color: white;
+    border-left: 2px solid #4070F4;
+    animation: animate 4s steps(12) infinite;
+    margin-top: 45.5vh;
+    z-index: 1; /* Add z-index to position the animated div above the parent container */
+  }
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+}
+

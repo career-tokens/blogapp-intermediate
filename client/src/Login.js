@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { auth, logInWithEmailAndPassword, signInWithGoogle } from "./Firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
+
 import "./Login.css";
 function Login() {
   const [email, setEmail] = useState("");
@@ -38,9 +41,19 @@ function Login() {
         >
           Login
         </button>
-        <button className="login__btn login__google" onClick={signInWithGoogle} style={{display:'none'}}>
+        <GoogleOAuthProvider clientId="658176736143-ec01d18e4eair7jpu16a47vdif673fb5.apps.googleusercontent.com">
+        <GoogleLogin
+           onSuccess={credentialResponse => {
+             console.log(credentialResponse);
+           }}
+          onError={() => {
+            console.log('Login Failed');
+           }}
+          />;
+        </GoogleOAuthProvider>;
+        {/**<button className="login__btn login__google" onClick={signInWithGoogle} style={{display:'none'}}>
           Login with Google
-        </button>
+  </button>*/ }
         <div>
           <Link to="/reset">Forgot Password</Link>
         </div>

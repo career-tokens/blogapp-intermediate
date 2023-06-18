@@ -5,7 +5,7 @@ import "./Dashboard.css";
 import { auth, db, logout } from "./Firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 function Dashboard() {
-  const [user, loading] = useAuthState(auth);
+  //const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
   const navigate = useNavigate();
   /**const fetchUserName = async () => {
@@ -19,18 +19,25 @@ function Dashboard() {
       alert("An error occured while fetching user data");
     }
   };*/
-  useEffect(() => {
+  var user=localStorage.getItem("user");
+  
+  const logout = () => {
+    localStorage.removeItem("user");
+    navigate("/login");
+  }
+  /**useEffect(() => {
     if (loading) return;
     if (!user) return navigate("/login");
    // fetchUserName();
-  });
+  });*/
   return (
     <div className="dashboard">
        <div className="dashboard__container">
         Logged in as
-         <div>{name}</div>
-         <div>{user?.email}</div>
-         <button className="dashboard__btn" onClick={logout}>
+         <div>{user}</div>
+         {/**<div>{user?.email}</div>*/}
+        <button className="dashboard__btn"
+          onClick={logout}>
           Logout
         </button>
         <button className="gotohome" onClick={()=>{navigate("/")}}>Go To Home</button>
