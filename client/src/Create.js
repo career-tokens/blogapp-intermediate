@@ -86,14 +86,14 @@ const Create = () => {
           className="body"
         ></textarea> 
         <label>Keyword:</label>
-        <div style={{display:"flex"}}>
+        <div style={{display:"flex",flexDirection:"column"}}>
           <input
           className="search-image"
           type="text"
           value={keyword}
           onChange={(e) => setKeyword(e.target.value)}
         />
-        <div style={{ marginLeft: '22px', width: '166px',marginTop:'-10px' }}>
+        <div style={{ width: '50vw' }}>
         <button onClick={handleSearch}>Search Images</button>
         </div>
 

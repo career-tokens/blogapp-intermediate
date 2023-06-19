@@ -47,9 +47,12 @@ const Bloglist = ({ title }) => {
        
        <div style={{display:'flex'}}>
 
-            <Link className="Link" to={`/blogs/${blog._id}`}>{/**back comma very imp */}
+          <Link className="Link" to={`/blogs/${blog._id}`}>{/**back comma very imp */}
+            <div className="big">
             <div className={`blogtitle ${index % 2 === 0 ? 'even' : 'odd'}`}>{blog.title}</div>
             <div className="blogauthor">~ {blog.author}</div>
+            </div>
+
             <div >
             <img className="image" src={blog.selectedImage} alt="img"  />
           </div>

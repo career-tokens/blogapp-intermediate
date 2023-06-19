@@ -8,64 +8,68 @@
 }
 
 .home2{
-    display:flex;
-    align-items:center;
-    margin:0 auto;
-    flex-direction:column;
-    //padding:30px;
-    background-color:#4E6E81;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    //padding: 30px;
+    background-color: #4E6E81;
     /**FAF8F1*/
     background-image:url('../images/peakpx.jpg')
 }
 .blog{
-    width:895px;
-    padding:12px;
-    margin-left:-360px;
-    margin-bottom:20px;
-    //background-color:black;
+    width: 54vw;
+    padding: 1.33vw;
+    margin-bottom: 5.33vw;
+    //background-color: black;
     transition: transform 0.3s ease-in-out;
-    border-radius:2rem;
-    height:209px;
+    border-radius: 2rem;
+    height: 15vw;
 }
 .blogtitle{
-    font-size: 35px;
+    font-size: 2.33vw;
     //color: white;
     text-align: left;
-    margin-left: 20px;
-    width: 564px;
-    height: 112px;
+    margin-left: 1vw;
+    width: 38vw;
+    height: 8.33vw;
     font-family: 'Jura', sans-serif;
 }
 .blogtitle:hover{
     text-decoration:underline;
 }
 .blogauthor{
-    font-size:27px;
+    font-size: 2.33vw;
     color: #865DFF;
-    text-align:left;
-    margin-left:20px;
+    text-align: left;
+    margin-left: 1vw;
     font-family: 'Squada One', cursive;
+    width: 38vw;
 }
 .blogauthor:hover{
     text-decoration:underline;
 }
 h2{
-    font-size:40px;
-    color:black;/**#E80F88;*/
-    margin-right:355px;
-    background-color:white;
-    border-radius:0.5rem;
-    padding:5px;
+    font-size: 3vw;
+    color: black;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.33vw;
     font-family: 'Bruno Ace SC', cursive;
 }
 .button{
-    text-align:center;
-    padding:20px;
-    margin-top:-55px;
+    padding: 0.3vh;
+    padding-bottom: 0.3vh;
+  margin-top: -10vh;
+  margin-left: 42vw;
+  width: 30vw;
+  margin-right: 11vh;
+  
+  padding-bottom: 1.1vh;
    
 }
 .btn{
-    padding: 0.6vh;
+    padding: 01vh;
     font-size: 2vh;
     border-radius: 1.5em;
 }
@@ -73,47 +77,72 @@ h2{
     text-decoration:none;
 }
 @media (min-width: 700px){
-
+    
+    .btn{
+        padding: 0.33vw;
+        font-size: 0.57vw;
+        border-radius: 1.5em;
+    }
+    
+    .big{
+        display:flex;
+        flex-direction:column;
+    }
+    
+    .button{
+        transform: scale(2.3);
+        padding-bottom: 2.2vw;
+        margin-top: -2.8vw;
+        margin-left: 42vw;
+        width: 30vw;
+    }
     .evenshadow:hover{
         transform: scale(1.05);
-        outline: 3px solid black; 
+        outline: 0.3vw solid black; 
     }
     .oddshadow:hover{
         transform: scale(1.05);
-        outline: 3px solid white; 
+        outline: 0.3vw solid white; 
     }
     .image {
-        width: 263px;
-        margin-left: 622px;
-        border-radius: 13px;
-        border: 2px solid white;
-        margin-top: -144px;
-        height: 195px;
+        width: 14vw;
+        margin-left: 39vw;
+        border-radius: 1em;
+        border: 0.3vw solid white;
+        height: 11.33vw;
+        margin-top: -13.33vw;
+        padding-right: 0;
+        padding-top: 0;
       }
   .date {
     color: white;
-    margin-top: 44px;
-    margin-left: 10px;
-    font-size: 21px;
+    margin-top: -0.2vw;
+    margin-left: 0.3vw;
+    font-size: 1.5vw;
     background-color: green;
-    border: 1px solid white;
-    padding: 4px 8px 4px 9px;
-    border-radius: 9px;
-    margin-bottom: 3px;
+    padding: 0.1vw 0.57vw;
+    border-radius: 1.06vw;
+    margin-bottom: 1.7vw;
+    border: 0.2vw solid white;
+    display: inline-block;
   }
   .keyword {
     color: white;
-    margin-top: 41px;
-    margin-left: 10px;
-    font-size: 26px;
+    margin-top: -1vh;
+    margin-left: 0.13vw;
+    font-size: 1.6vw;
     background-color: green;
-    border: 1px solid white;
-    padding: 4px 8px 4px 9px;
-    border-radius: 9px;
+    border-radius: 0.8vw;
+    border: .6vh solid white;
+    padding-right: 0.6vw;
+    padding-left: 0.5vw;
+    margin-bottom: 1.6vw;
+    padding-bottom: 0.27vw;
   }
   .date-keyword{
-   display:flex;
-   margin-top:-90px;
+    display: flex;
+    flex-direction: row;
+    width: 66vw;
   }
   
 }
