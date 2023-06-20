@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 
 const LoginPage = () => {
-  //console.log(process.env.REACT_APP_CLIENT_ID)
+  console.log(process.env.REACT_APP_CLIENT_ID)
   //while using .env in react
   //1.use it in same priority file place wrt src
   //2.use REACT_APP_.. else wont work
