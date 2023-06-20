@@ -26,8 +26,23 @@ const OpeningScreen = () => {
         reveals[i].classList.remove('active')
     }
   }
+
+  window.addEventListener('scroll', function() {
+    var contentDiv = document.getElementById('content');
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > 0) {
+      contentDiv.style.display = 'none';
+    } 
+  });
+  
   return (
     <div>
+<div id="content" style={{ display: screenWidth >= 700 ? "flex" : "none", textAlign: "center", flexDirection: "column" }}>
+  <div>Can't see anything?</div>
+  <div>Try scrolling down</div>
+</div>
+
       <div className="row row1 reveal">
         <div className="left">
           <h3 className="h3_1">Explore the best blogs!</h3>
