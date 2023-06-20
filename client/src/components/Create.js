@@ -1,8 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-/**import { dab } from "./Firebase";
-import { uid } from "uid";
-import { set,ref } from "firebase/database";*/
 import './Create.css';
 
 const Create = () => {

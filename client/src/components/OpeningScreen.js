@@ -1,17 +1,19 @@
 import React from 'react';
-import blog from "./blog.png";
-import creative from "./image3.png";
-import write from "./write.png";
-import image1 from "./image1.webp";
-import image2 from "./image2.jpg";
-import image3 from "./image3.jpg";
+import blog from "../blog.png";
+import creative from "../image3.png";
+import write from "../write.png";
+import image1 from "../image1.webp";
+import image2 from "../image2.jpg";
+import image3 from "../image3.jpg";
 import "./OpeningScreen.css"
 
 const OpeningScreen = () => {
- // const getScreenWidth = () => window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  //const screenWidth = getScreenWidth();
   const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   console.log(screenWidth);
+  //based on the screen width , we r going to decide which UI to use
+
+  //below is the animation handling for this component's pc version where when u scroll down 
+  //the divs pop up
   window.addEventListener('scroll', reveal);
   function reveal() {
     var reveals = document.querySelectorAll('.reveal');
@@ -27,6 +29,9 @@ const OpeningScreen = () => {
     }
   }
 
+  //since for the main divs to pop up , u need to scroll, so initially its all white so
+  //to give a hint a div saying to scroll down is displayed but once the user scrolls down which 
+  // means that it now needs to be gone so JS to handle that part is written below
   window.addEventListener('scroll', function() {
     var contentDiv = document.getElementById('content');
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;

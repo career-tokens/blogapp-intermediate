@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import { Blog } from "./models/Blog.js";
 
-export const app = express();
+export const app = express();//using express app
 config({
   path: "./.env",
 });
@@ -19,12 +19,13 @@ app.use(
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
-);
-app.use(express.json());
+);// avoiding cors errors
+
+app.use(express.json());//for dealing with json
 
 app.get("/api/test", (req, res) => {
   res.json("test ok3");
-});
+});//this sets up a prototype such that when something makes a GET request on that url , that function is dn
 
 app.post("/api/blogs", async (req, res) => {
   const { title, author, body ,selectedImage ,keyword ,date } = req.body;

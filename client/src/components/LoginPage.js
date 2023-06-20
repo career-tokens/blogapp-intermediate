@@ -6,7 +6,16 @@ import { Link, useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 
 const LoginPage = () => {
+  //console.log(process.env.REACT_APP_CLIENT_ID)
+  //while using .env in react
+  //1.use it in same priority file place wrt src
+  //2.use REACT_APP_.. else wont work
+  //3.restart the server
+  
   const navigate = useNavigate();
+
+  //typing animation handling , such that first Family then Blogger's Den keep interchanging
+  //after specific intervals based on the translating div above them
   const [text, setText] = useState("Family");
   const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   
@@ -37,6 +46,9 @@ const LoginPage = () => {
 
   }, []);
 
+  //after u successfully verfiy your google mail through google oauth which then sends your credentials
+  //which is decoded so that we get the username and store it as the user in local storage and then 
+  //redirected to home page ( u r successfully logged in now)
   const handleGoogleLogin = (e) => {
     console.log(e);
     var decoded = jwt_decode(e.credential);
@@ -58,7 +70,7 @@ const LoginPage = () => {
             </h1>
           </div>
 
-          <GoogleOAuthProvider clientId="658176736143-ec01d18e4eair7jpu16a47vdif673fb5.apps.googleusercontent.com">
+          <GoogleOAuthProvider clientId={process.env.REACT_APP_CLIENT_ID}>
             <GoogleLogin
               onSuccess={handleGoogleLogin}
               onError={() => {

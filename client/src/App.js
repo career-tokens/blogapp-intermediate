@@ -1,16 +1,13 @@
-import './Navbar.css';
-import './Home.css';
-import Navbar from './Navbar';
-import Home from './Home';
+import './components/Navbar.css';
+import './components/Home.css';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Create from './Create';
-import BlogDetails from './BlogDetails';
-import Login from './Login';
-import Register from './Register';
-import Dashboard from './Dashboard';
-import Reset from './Reset';
-import OpeningScreen from './OpeningScreen';
-import LoginPage from './LoginPage';
+import Create from './components/Create';
+import BlogDetails from './components/BlogDetails';
+import Dashboard from './components/Dashboard';
+import OpeningScreen from './components/OpeningScreen';
+import LoginPage from './components/LoginPage';
 
 function App() {
   return (
@@ -19,8 +16,6 @@ function App() {
       <Routes>
         {/* Routes without Navbar */}
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<Register />} />
-          <Route exact path="/reset" element={<Reset />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
         
         {/* Routes with Navbar */}

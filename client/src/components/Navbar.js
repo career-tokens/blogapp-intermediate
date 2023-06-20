@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
-import { auth, db } from "./Firebase";
-import { query, collection, getDocs, where } from "firebase/firestore";
-import Catchy from "./Catchy";
 
 function Navbar() {
-  //const [user, loading ] = useAuthState(auth);
   const [text, setText] = useState("New Blog");
   const navigate = useNavigate();
-  var user=localStorage.getItem("user");
 
+  var user=localStorage.getItem("user");//this navbar is supposed to work for both logged in and logged out users
+  //so we are checking whether the user is logged in or not 
 
   useEffect(() => {
     if (user) {
@@ -21,29 +17,9 @@ function Navbar() {
     }
   }, [user]);
 
-  /**const fetchUserInitials = async () => {
-    try {
-      const q = query(collection(db, "users"), where("uid", "==", user?.uid));
-      const doc = await getDocs(q);
-      const data = doc.docs[0].data();
-      const name = data.name || user.email;
-      const words = name.split(" ");
-      let initials = "";
-      words.forEach((word) => {
-        initials += word.charAt(0);
-      });
-      setInitials(initials.toUpperCase());
-    } catch (err) {
-      console.error(err);
-      alert("An error occured while fetching user data");
-    }
-  };*/
-
- /**  useEffect(() => {
-    if (loading) return;
-    if (!user) return navigate("/login");
-   // fetchUserInitials();
-  }, [user, loading]);*/
+ //if user is not logged in then we need to only display "Login for Free!"
+ // else there will be threeoptions out of which one's naming will be changed to "New Blog"
+ //when not logged in , rest two options' display is turned off
 
   return (
     <nav>
@@ -63,7 +39,6 @@ function Navbar() {
           </button>
         </div>
       </div>
-      <Catchy />
     </nav>
   );
 }

@@ -2,21 +2,12 @@ import { useNavigate, useParams } from "react-router-dom";
 /**import { useState } from "react";*/
 import useFetch from "./useFetch";
 import './BlogDetails.css';
-/**import { dab } from "./Firebase";
-import { get,child,ref, remove } from "firebase/database";*/
 
 const BlogDetails = () => {
   const { id } = useParams();
-  /**const [blog, setBlog] = useState('');*/
+  
   const { data: blog, error, isPending } = useFetch(`https://blogapp-cvdo.onrender.com/api/transactions/${id}`);
-  /**get(child(ref(dab), `blogs/${id}`)).then((snapshot) => {
-    if (snapshot.exists()) {
-     setBlog(snapshot.val());
-    } else {
-      console.log("No data available");
-    }
-  }
-  )*/
+
   const navigate = useNavigate();
 
   const handleClick = (id) => {

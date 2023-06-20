@@ -1,17 +1,5 @@
 @media (min-width: 700px) {
- /** .row{
-    animation:emerge 1.5s ease-in-out;
-  }
-  @keyframes emerge{
-    0%{
-      transform:translate(0,100%);
-      opacity:0;
-    }
-    100%{
-      transform:translate(0,0);
-      opacity:1;
-    }
-  } */
+/**reveal marks intial position while .reveal.active is not triggered until the user does not scroll down*/
   .reveal{
     position:relative;
     transform:translateY(25%);
@@ -136,21 +124,21 @@
     }
 
     .right1 {
-      background-image: url("../images/orange.jpg");
+      background-image: url("../../images/orange.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
     }
   
     .right2{
-      background-image: url("../images/purple.jpg");
+      background-image: url("../../images/purple.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
     }
   
     .right3 {
-      background-image: url("../images/green.jpg");
+      background-image: url("../../images/green.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;

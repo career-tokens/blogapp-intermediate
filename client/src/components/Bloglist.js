@@ -2,10 +2,11 @@ import React, { useState, useEffect,CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import ClockLoader from "react-spinners/ClockLoader";
-
+//ClockLoader is a loading animation from react-spinners
 const Bloglist = ({ title }) => {
   const [blogs, setBlogs] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+
+  const [isLoading, setIsLoading] = useState(true);//to check whether its loading time or not
 
   const override: CSSProperties = {
     display: "block",

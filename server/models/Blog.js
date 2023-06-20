@@ -9,5 +9,5 @@ const BlogSchema = new Schema({
     date: { type: Date, default: Date.now },
 });
 
-export const Blog = model('Blog', BlogSchema)
+export const Blog = model('Blog', BlogSchema);//model connected to mongoose and mongoose connected to database
 
