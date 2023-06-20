@@ -106,6 +106,7 @@ const Create = () => {
             {imageList.map((image) => (
               <div key={image.id} style={{ margin: '10px' }}>
                 <img
+                  className="Image"
                   src={image.url}
                   alt="Unsplash Img"
                   width="200"

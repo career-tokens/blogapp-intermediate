@@ -31,7 +31,7 @@ const Bloglist = ({ title }) => {
         console.log(error);
         setIsLoading(false); // Set loading to false on error
       });
-  }, []);
+  });
 
   const navigate = useNavigate();
   const handleDelete = (id) => {
