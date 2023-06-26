@@ -3,6 +3,8 @@
 
 It is a full-stack app made for writing , reading and deleting blogs . 
 
+## App link:
+[blogapp-k5ni.vercel.app](https://blogapp-k5ni.vercel.app/)
 
 ## Tech Stack used:
 Node , React , Express , MongoDB ,Google OAuth , Unsplash API 
@@ -24,4 +26,12 @@ iv)sometimes loading the blogs (or fetching data from database)
 takes more than 1 minute , tho after loading once , it becomes fast\
 v)need to give more facilities to the writer (like styling elements to include in their writing)\
 vi)need to add the facility of including images inside the blog body as well
-## GIFs of the project:
+## Video of the mobile version of the project:
+[Untitled (3).webm](https://github.com/career-tokens/blogapp/assets/134730030/099c215c-67d1-4823-8861-dbd3613ba8f0)
+
+## Video of the pc version of the project (the vid quality is bad since I had to bring the size down to 10 MB):
+
+
+https://github.com/career-tokens/blogapp/assets/134730030/16bc06ec-4a81-4c02-9a9f-2b2006d2778d
+
+
