@@ -1,3 +1,4 @@
+![image](https://github.com/career-tokens/blogapp-intermediate/assets/134730030/2b2f8390-1d08-49a9-beee-9ba3f1f465ea)
 
 # Blog-App
 
