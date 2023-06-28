@@ -3,6 +3,7 @@
 # Blog-App
 
 It is a full-stack app made for writing , reading and deleting blogs . 
+Its made for both pc and mobile but if you are on pc and switch to mobile viewing using your browser , please refresh so that the corresponding UI can load.
 
 ## App link:
 [blogapp-k5ni.vercel.app](https://blogapp-k5ni.vercel.app/)
