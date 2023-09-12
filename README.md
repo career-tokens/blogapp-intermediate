@@ -7,6 +7,7 @@ Its made for both pc and mobile but if you are on pc and switch to mobile viewin
 
 ## App link:
 [blogapp-k5ni.vercel.app](https://blogapp-k5ni.vercel.app/)
+(Loading takes time )
 
 ## Tech Stack used:
 Node , React , Express , MongoDB ,Google OAuth , Unsplash API 
